@@ -2,15 +2,15 @@ server:
   port: 8080
 
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb
+    #url: jdbc:mysql://localhost:3306/testdb?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC&tinyInt1isBit=false
+    username: root
+    password: 111111
   mvc:
     view:
       suffix: .html
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${DB_HOST:db}:3306/testdb?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8
-    #url: jdbc:mysql://db:3306/testdb?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8
-    username: root
-    password: 111111
 
   jpa:
     hibernate:
